@@ -130,7 +130,7 @@ Before you begin this section, obtain the private and public IP addresses of VM1
 3.	If prompted, select **Connect**. Enter the user name and password you specified when creating the VM. You may need to select **More choices**, then **Use a different account**, to specify the credentials you entered when you created the VM.
 4.	Select **OK**.
 5.	Click Yes on the Networks blade.
-6.	From PowerShell, enter *ping vm2*. Ping fails, why is that? **Each virtual network is isolated from other virtual networks.** 
+6.	From PowerShell, enter *ping vm2* (use vm2 Private IP -Copy from VM overview page of portal). Ping fails, why is that? **Each virtual network is isolated from other virtual networks.** 
 7. To allow VM1 to ping other VMs in a later step, enter the following command from PowerShell, which allows ICMP inbound through the Windows firewall:
 _New-NetFirewallRule –DisplayName “Allow ICMPv4-In” –Protocol ICMPv4_.
 8. Repeat these steps (connect to the VM and issue the PowerShell command) for VM2 and VM3.
@@ -166,7 +166,7 @@ Peering status - If you don't see the status, refresh your browser.  Notice the 
  2. After selecting the Connect button, click on **Download RDP file**.
  3. If prompted, select **Connect**. Enter the user name and password you specified when creating the VM. You may need to select More choices, then Use a different account, to specify the credentials you entered when you created the VM. Select **OK**.
  4. Click **Yes** on the Networks blade.
-5. From PowerShell, enter *ping vm2*. Ping succeeds, why is that? 
+5. From PowerShell, enter *ping vm2 private IP* . Ping succeeds, why is that? 
 
 Let's examine our network topology now that we have peering enabled.
 1.  Click on **Monitor** from the left hand pane.
