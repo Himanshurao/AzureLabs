@@ -42,16 +42,8 @@ Repeat the steps above for vNet2:
 * Subnet Name: **subnet2**
 * Subnet address range: **10.2.2.0/24**
 
-Repeat the steps above for vNet3:
-* Name: **vNet3**
-* Address Space: **10.3.0.0/16**
-* Resource Group: **myVNets**
-* Location: *Choose a consistent and supported location*
-* Subnet Name: **subnet3**
-* Subnet address range: **10.3.3.0/24**
-
  
-### Create three virtual machines
+### Create Two virtual machines
 
 1.	Select **+ Create a resource** found on the upper left corner of the Azure portal.
 2.	Select **Compute** and then select **Windows Server 2016 Datacenter**.
@@ -59,12 +51,12 @@ Repeat the steps above for vNet3:
     * Resource Group: *Create new*: **MyVMs**
     * Name: **VM1**
     * Region: *Choose a consistent and supported Region*
-    * Size: *Change to **B2ms***
+    * Size: *Change to **DS1_v2***
     * Username: pick a username
     * Password: pick a complex password (I recommend *Complex.Password*)
     * Confirm Password: pick a complex password  (I recommend *Complex.Password*)
     * Public inbound ports:  Open RDP, 3389
-    * Select **Next:Disks**
+    * Select **Next:Disks** : Dont attach any Data Disk for now.
 4.	Click **Next: Networking**.
 5.	Set the virtual network to **vNet01** and then select **Next: Management >**.
 6.	Under Diagnostic storage account click **Create new** and enter  *yourinitials* *shortdate* and ensure the name resolves (e.g. abc1009), click **OK**, and then click **Next: Guest config >**.
@@ -77,12 +69,12 @@ Complete the previous steps but use the following information:
 1.* Resource Group: MyVMs
 * Name: **VM2**
 * Region: *Choose a consistent supported Region*
-* Size: Change to **B2ms**
+* Size: Change to **DS1_v2**
 * Username: pick a username
 * Password: pick a complex password
 * Confirm Password: pick a complex password
 * Public inbound ports: Open RDP, 3389
-* Select **Next:Disks >**
+* Select **Next:Disks >** Dont attach any Data Disk for now.
 * Click **Next: Networking >**
 * Set the virtual network to vNet2 and then select **Next: Management >**
 * Under Diagnostic storage account use the previously created Diagnostics storage account and then click **Next: Guest config >**.
@@ -90,25 +82,7 @@ Complete the previous steps but use the following information:
 * Review the items and then click **Next: Review + create >**.
 * Once validation passes click **Create**.
 
-#### Create the third VM
-Complete the previous steps but use the following information:
-* Resource Group: MyVMs
-* Name: **VM3**
-* Region: *Choose a consistent supported Region*
-* Size: Change to **B2ms**
-* Username: pick a username
-* Password: pick a complex password
-* Confirm Password: pick a complex password
-* Public inbound ports: Open RDP
-* Select **Next:Disks >**
-* Click **Next: Networking >**
-* Set the virtual network to vNet3 and then select **Next: Management >**
-* Under Diagnostic storage account use the previously created Diagnostics storage account and then click **Next: Guest config >**.
-* Review the items and then click **Next: Tags >**.
-* Review the items and then click **Next: Review + create >**.
-* Once validation passes click **Create**.
-
-You now have three virtuals machines each in their own subnet and virtual network. Let's validate that.
+You now have two virtuals machines each in their own subnet and virtual network. Let's validate that.
 
 1. From the Azure Dashboard, select **All services**.
 2. Under **Networking**, select the following:
@@ -118,7 +92,7 @@ You now have three virtuals machines each in their own subnet and virtual networ
     * Network Watcher
 4. Click on **Monitor** from the left hand pane.
 5. Under **Insights** select **Network**, then under **Monitoring** choose **Topology**.
-6. User **Resource Group** select **MyVNets**.  In a moment a conceptual network diagram should be generated showing all three vNets and subnets.
+6. User **Resource Group** select **MyVNets**.  In a moment a conceptual network diagram should be generated showing all two vNets and subnets.
 
 
 ### Connect to a VM and test connectivity
