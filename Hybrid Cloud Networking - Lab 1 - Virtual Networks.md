@@ -1,14 +1,14 @@
 # Lab 1 - Azure VM & VNet Peering
  
 ## Lab Summary
->> Creating multiple Azure Vnets & Subnets
->> Creating Azure Subnets 
->> Deploying Test VMs in each Subnets 
->> Enabling Azure Vnet Peering 
->> Testing connectivity between Azure Vnets
->> Adding  Data Disks, Enabling Caching & initializing in VM. 
->> Detaching Data Disks & Deleting it 
->> Cleaning up Resources
+*  Creating multiple Azure Vnets & Subnets
+*  Creating Azure Subnets 
+*  Deploying Test VMs in each Subnets 
+*  Enabling Azure Vnet Peering 
+*  Testing connectivity between Azure Vnets
+*  Adding  Data Disks, Enabling Caching & initializing in VM. 
+*  Detaching Data Disks & Deleting it 
+*  Cleaning up Resources
 
 ### Create three virtual networks
 1.	Log in to the Azure portal at https://portal.azure.com and 	click on **+Create a resource**  on the upper left corner of the Azure portal.
