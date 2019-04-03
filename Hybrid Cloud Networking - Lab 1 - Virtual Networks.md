@@ -161,3 +161,11 @@ Let's examine our network topology now that we have peering enabled.
 4. In the Disks pane, to the far right of the data disk that you would like to detach, click the Detach button image detach button.
 5. After the disk has been removed, click Save on the top of the pane.
 6. In the virtual machine pane, click Overview and then click the Start button at the top of the pane to restart the VM.
+
+### Clean up resources 
+When no longer needed, delete the resource group and all of the resources it contains:
+
+1. Enter myResourceGroup in the Search box at the top of the portal. When you see myResourceGroup in the search results, select it.
+2. Select Delete resource group.
+3. Enter myResourceGroup for TYPE THE RESOURCE GROUP NAME: and select Delete.
+Perform this steps for all resource group one by one which got created during this lab to clean up resources. 
