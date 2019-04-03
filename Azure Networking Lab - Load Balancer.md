@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ## Azure Networking Lab - Load Balancer
 =======
 # Azure Networking Lab - Load Balancer
