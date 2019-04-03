@@ -1,22 +1,22 @@
 # Lab 1 - Azure VM & VNet Peering
  
 ## Lab Summary
-*  Creating multiple Azure Vnets & Subnets
-*  Creating Azure Subnets 
-*  Deploying Test VMs in each Subnets 
-*  Enabling Azure Vnet Peering 
-*  Testing connectivity between Azure Vnets
-*  Adding  Data Disks, Enabling Caching & initializing in VM. 
-*  Detaching Data Disks & Deleting it 
-*  Cleaning up Resources
+*  Task-1: Creating multiple Azure Vnets & Subnets
+*  Task-2: Create Two virtual machines & testing connnectivity 
+*  Taks-3: Connect virtual networks with virtual network peering 
+*  Taks-4:Testing connectivity between Azure Vnets
+*  Taks-5: Adding new Data Disks, Enabling Caching 
+*  Task-6: Detaching Data Disks & Deleting it 
+*  Task-7: Connecting & using Azure VM's Serial Console
+*  Task-8: Cleaning up Resources
 
-### Create three virtual networks
+### Task-1: Create two virtual networks
 1.	Log in to the Azure portal at https://portal.azure.com and 	click on **+Create a resource**  on the upper left corner of the Azure portal.
 2.	Select **Networking**, and then select **Virtual network**.
 3.	Enter or select the following information, accept the defaults for the remaining settings, and then select **Create**:
     * Name: **vNet1**
     * Address Space: **10.1.0.0/16**
-    * Resource Group: *Create New* **myVNets**
+    * Resource Group: *Create New* **Lab1**
     * Location: *Choose a consistent and supported location*
     * Subnet Name: **subnet1**
     * Subnet address range: **10.1.1.0/24**
@@ -24,18 +24,18 @@
 Repeat the steps above for vNet2:
 * Name: **vNet2**
 * Address Space: **10.2.0.0/16**
-* Resource Group: **myVNets**
+* Resource Group: **Lab1**
 * Location: *Choose a consistent and supported location*
 * Subnet Name: **subnet2**
 * Subnet address range: **10.2.2.0/24**
 
  
-### Create Two virtual machines
+### Task-2:Create Two virtual machines & testing connnectivity
 
 1.	Select **+ Create a resource** found on the upper left corner of the Azure portal.
 2.	Select **Compute** and then select **Windows Server 2016 Datacenter**.
 3.	Enter or select the following information, accept the defaults for the remaining settings:
-    * Resource Group: *Create new*: **MyVMs**
+    * Resource Group: *Create new*: **Lab1**
     * Name: **VM1**
     * Region: *Choose a consistent and supported Region*
     * Size: *Change to **DS1_v2***
@@ -53,7 +53,7 @@ Repeat the steps above for vNet2:
 
 #### Create the second VM
 Complete the previous steps but use the following information:
-1.* Resource Group: MyVMs
+1.* Resource Group: Lab1
 * Name: **VM2**
 * Region: *Choose a consistent supported Region*
 * Size: Change to **DS1_v2**
@@ -79,10 +79,10 @@ You now have two virtuals machines each in their own subnet and virtual network.
     * Network Watcher
 4. Click on **Monitor** from the left hand pane.
 5. Under **Insights** select **Network**, then under **Monitoring** choose **Topology**.
-6. User **Resource Group** select **MyVNets**.  In a moment a conceptual network diagram should be generated showing all two vNets and subnets.
+6. User **Resource Group** select **Lab1**.  In a moment a conceptual network diagram should be generated showing all two vNets and subnets.
 
 
-### Connect to a VM and test connectivity
+#### Connect to a VM and test connectivity
 Before you begin this section, obtain the private and public IP addresses of VM1, VM2, and VM3.
 
 1.	At the top of the Azure portal, enter **VM1**. When VM1 appears in the search results, select it. Select the **Connect** button.
@@ -98,7 +98,7 @@ _New-NetFirewallRule –DisplayName “Allow ICMPv4-In” –Protocol ICMPv4_.
 
 
 
-### Connect virtual networks with virtual network peering using the Azure portal
+### Task-3 :Connect virtual networks with virtual network peering using the Azure portal
 You can connect virtual networks to each other with virtual network peering. These virtual networks can be in the same region or different regions (also known as Global VNet peering). Once virtual networks are peered, resources in both virtual networks are able to communicate with each other, with the same latency and bandwidth as if the resources were in the same virtual network. 
 
 #### Peer virtual networks
@@ -122,7 +122,7 @@ Complete steps 2-3 again, with the following changes, and then select **OK**:
 Peering status - If you don't see the status, refresh your browser.  Notice the status is *Connected*.  
  Azure also changed the peering status for the vNet1-vNet2 peering from Initiated to Connected. Virtual network peering is not fully established until the peering status for both virtual networks is Connected.
 
- ### Test connectivity
+ ### Task-4: Test connectivity
  1. At the top of the Azure portal, enter **VM1**. When VM1 appears in the search results, select it. Select the **Connect** button.
  2. After selecting the Connect button, click on **Download RDP file**.
  3. If prompted, select **Connect**. Enter the user name and password you specified when creating the VM. You may need to select More choices, then Use a different account, to specify the credentials you entered when you created the VM. Select **OK**.
@@ -134,7 +134,7 @@ Let's examine our network topology now that we have peering enabled.
 2. Under **Insights** select **Network**, then under **Monitoring** choose **Topology**.
 3. User **Resource Group** select **MyVNets**.  In a moment a conceptual network diagram should be generated showing all three vNets and subnets including the new peerings between vNet1 and vNet2.
 
- ### Add/Attach New Data Disk 
+ ### Taks-5: Adding  New Data Disks, Enabling Caching 
 1. In the Azure portal, from the menu on the left, select Virtual machines.
 2. Select VM1as virtual machine from the list.
 3. On the Virtual machine page, select Disks.
@@ -143,7 +143,7 @@ Let's examine our network topology now that we have peering enabled.
 6. In the Create managed disk page, type in a name for the disk and adjust the other settings as necessary. When you're done, select Create.
 7. In the Disks page, select Save to save the new disk configuration for the VM.
 8. After Azure creates the disk and attaches it to the virtual machine, the new disk is listed in the virtual machine's disk settings under Data disks.
- ### Detach a data disk using the portal
+ ### Task-6: Detaching Data Disks & Deleting it
 1. In the Azure portal, from the menu on the left, select Virtual machines.
 2. Select VM1 as virtual machine from the list.
 3. On the Virtual machine page, select Disks.
@@ -151,10 +151,25 @@ Let's examine our network topology now that we have peering enabled.
 5. After the disk has been removed, click Save on the top of the pane.
 6. In the virtual machine pane, click Overview and then click the Start button at the top of the pane to restart the VM.
 
-### Clean up resources 
+ ### Task-7: Connecting & using Azure VM's Serial Console
+
+1. Open the Azure portal.
+2. On the left menu, select Virtual machines.
+3. Select a VM in the list. The overview page for the VM will open.
+4. Scroll down to the Support + troubleshooting section and select Serial console. A new pane with the serial console opens and starts the connection.
+5. Connect to the serial console. If you successfully connect, the prompt is SAC>:
+6. Enter cmd to create a channel that has a CMD instance.
+7. Enter ch -si 1 to switch to the channel that's running the CMD instance.
+8. Press Enter, and then enter sign-in credentials with administrative permissions.
+9. After you've entered valid credentials, the CMD instance opens.
+
+To start a PowerShell instance, enter PowerShell in the CMD instance, and then press Enter.
+### Task-8: Clean up resources 
 When no longer needed, delete the resource group and all of the resources it contains:
 
 1. Enter myResourceGroup in the Search box at the top of the portal. When you see myResourceGroup in the search results, select it.
 2. Select Delete resource group.
-3. Enter myResourceGroup for TYPE THE RESOURCE GROUP NAME: and select Delete.
+3. Enter myResourceGroup for TYPE THE RESOURCE GROUP NAME:Lab1 and select Delete.
 Perform this steps for all resource group one by one which got created during this lab to clean up resources. 
+
+
