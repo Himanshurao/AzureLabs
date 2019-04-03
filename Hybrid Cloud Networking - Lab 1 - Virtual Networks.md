@@ -132,7 +132,7 @@ Peering status - If you don't see the status, refresh your browser.  Notice the 
 Let's examine our network topology now that we have peering enabled.
 1.  Click on **Monitor** from the left hand pane.
 2. Under **Insights** select **Network**, then under **Monitoring** choose **Topology**.
-3. User **Resource Group** select **MyVNets**.  In a moment a conceptual network diagram should be generated showing all three vNets and subnets including the new peerings between vNet1 and vNet2.
+3. User **Resource Group** select **Lab1**.  In a moment a conceptual network diagram should be generated showing all three vNets and subnets including the new peerings between vNet1 and vNet2.
 
  ### Taks-5: Adding  New Data Disks, Enabling Caching 
 1. In the Azure portal, from the menu on the left, select Virtual machines.
