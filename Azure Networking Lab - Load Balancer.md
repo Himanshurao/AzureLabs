@@ -1,7 +1,7 @@
 <<<<<<< HEAD
-## Lab 2 - Load Balancer
+## Azure Networking Lab - Load Balancer
 =======
-# Lab 2 - Load Balancer
+# Azure Networking Lab - Load Balancer
 
 Load balancing provides a higher level of availability and scale by spreading incoming requests across multiple virtual machines (VMs). You can use the Azure portal to create a load balancer that will load balance virtual machines. In this lab you will learn how to create network resources, back-end servers, and a load balancer at the Basic pricing tier.
 
