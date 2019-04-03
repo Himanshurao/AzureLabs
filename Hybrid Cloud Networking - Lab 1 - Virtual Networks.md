@@ -46,7 +46,7 @@ Repeat the steps above for vNet2:
     * Select **Next:Disks** : Dont attach any Data Disk for now.
 4.	Click **Next: Networking**.
 5.	Set the virtual network to **vNet01** and then select **Next: Management >**.
-6.	Under Diagnostic storage account click **Create new** and enter  *yourinitials* *shortdate* and ensure the name resolves (e.g. abc1009), click **OK**, and then click **Next: Guest config >**.
+6.	Under Diagnostic storage account click **Create new** and enter  *yourinitials* *shortdate* and ensure the name resolves (e.g. abc1009), click **OK**. For storage account select resource group as "Lab1", and then click **Next: Guest config >**.
 7.	Review the items and then click **Next: Tags >**.
 8.	Review the items and then click **Next: Review + create .**.
 9.	Once validation passes click **Create**.
