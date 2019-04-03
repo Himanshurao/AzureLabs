@@ -12,17 +12,15 @@ If you are using a Microsoft Azure subscription that was provided to you by Micr
 Otherwise you will receive an error in the portal if you select an unsupported region and attempt to build anything in Microsoft Azure.
 
 ## Lab Summary
-You will complete four different labs on the following core elements of Azure Networking:
-1) Virtual networks 
-2) Load Balancing
-3) Traffic Manager
-4) Network Watcher
+>> Creating multiple Azure Vnets & Subnets
+>> Creating Azure Subnets 
+>> Deploying Test VMs in each Subnets 
+>> Enabling Azure Vnet Peering 
+>> Testing connectivity between Azure Vnets
+>> Adding  Data Disks, Enabling Caching & initializing in VM. 
+>> Detaching Data Disks & Deleting it 
+>> Cleaning up Resources
 
-Each lab is a unique file on GitHub 
-
-  
-## Lab 1 - Virtual Networks
-In this lab you are going top create multiple virtual networks each with it's own virtual machine and subnet and then test connectivity across subnets and vnets.
 ### Create three virtual networks
 1.	Log in to the Azure portal at https://portal.azure.com and 	click on **+Create a resource**  on the upper left corner of the Azure portal.
 2.	Select **Networking**, and then select **Virtual network**.
@@ -146,3 +144,20 @@ Let's examine our network topology now that we have peering enabled.
 1.  Click on **Monitor** from the left hand pane.
 2. Under **Insights** select **Network**, then under **Monitoring** choose **Topology**.
 3. User **Resource Group** select **MyVNets**.  In a moment a conceptual network diagram should be generated showing all three vNets and subnets including the new peerings between vNet1 and vNet2.
+
+ ### Add/Attach New Data Disk 
+1. In the Azure portal, from the menu on the left, select Virtual machines.
+2. Select VM1as virtual machine from the list.
+3. On the Virtual machine page, select Disks.
+4. On the Disks page, select Add data disk.
+5. In the drop-down for the new disk, select Create disk.
+6. In the Create managed disk page, type in a name for the disk and adjust the other settings as necessary. When you're done, select Create.
+7. In the Disks page, select Save to save the new disk configuration for the VM.
+8. After Azure creates the disk and attaches it to the virtual machine, the new disk is listed in the virtual machine's disk settings under Data disks.
+ ### Detach a data disk using the portal
+1. In the Azure portal, from the menu on the left, select Virtual machines.
+2. Select VM1 as virtual machine from the list.
+3. On the Virtual machine page, select Disks.
+4. In the Disks pane, to the far right of the data disk that you would like to detach, click the Detach button image detach button.
+5. After the disk has been removed, click Save on the top of the pane.
+6. In the virtual machine pane, click Overview and then click the Start button at the top of the pane to restart the VM.
