@@ -1,4 +1,4 @@
-# Lab 1 - Azure Virtual Networks & VNet Peering
+# Lab 1 - Azure VM & VNet Peering
  
 ## Before you Begin
 If you are using a Microsoft Azure subscription that was provided to you by Microsoft, you using what is called sponsored Azure and that subscription is  limited to a specific set of Microsoft Azure regions. Please consistently use one of the following locations:
