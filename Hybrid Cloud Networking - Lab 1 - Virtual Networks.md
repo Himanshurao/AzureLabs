@@ -1,16 +1,5 @@
 # Lab 1 - Azure VM & VNet Peering
  
-## Before you Begin
-If you are using a Microsoft Azure subscription that was provided to you by Microsoft, you using what is called sponsored Azure and that subscription is  limited to a specific set of Microsoft Azure regions. Please consistently use one of the following locations:
-* East US
-* South Central US
-* West Europe
-* Southeast Asia
-* West US 2
-* West Central US 
-
-Otherwise you will receive an error in the portal if you select an unsupported region and attempt to build anything in Microsoft Azure.
-
 ## Lab Summary
 >> Creating multiple Azure Vnets & Subnets
 >> Creating Azure Subnets 
